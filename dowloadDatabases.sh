@@ -1,4 +1,4 @@
-#!/bin/bash
+x#!/bin/bash
 
 protocol="http://"
 hostname="www.bridgedb.org"
@@ -30,4 +30,4 @@ fulladdress="$protocol$hostname$path$data/$dataset/$distribution/$version"
 echo $fulladdress
 
 #wget  -np -nH --cut-dirs 1 $fulladdress
-wget -r -np -nH --cut-dirs=5 -R index.html -R robots.txt $fulladdress
+wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress
