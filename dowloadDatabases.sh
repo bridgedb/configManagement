@@ -26,7 +26,7 @@ else
 fi
 
 
-fulladdress="$protocol$hostname$path$data/$dataset/$distribution/$version"
+fulladdress="$protocol$hostname$path$data/$dataset/$distribution/$version/"
 echo $fulladdress
 
 #wget  -np -nH --cut-dirs 1 $fulladdress
