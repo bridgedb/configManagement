@@ -2,7 +2,7 @@
 
 #rm gdb.config 2> /dev/null
 
-#find . -depth -name '*.zip' -exec /usr/bin/unzip -n {} \; -delete
+find . -depth -name '*.zip' -exec /usr/bin/unzip -n {} \; -delete
 
 wget -q https://raw.githubusercontent.com/bridgedb/BridgeDb/master/dbbuilder/src/org/bridgedb/extract/SpeciesList -O SpeciesList
 
