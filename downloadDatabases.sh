@@ -1,4 +1,4 @@
-x#!/bin/bash
+#!/bin/bash
 
 protocol="http://"
 hostname="www.bridgedb.org"
@@ -25,9 +25,18 @@ else
   version="$3"
 fi
 
+fulladdress_folder="$protocol$hostname$path$data/$dataset/$distribution/$version/"
+fulladdress_file="$protocol$hostname$path$data/$dataset/$distribution/$version"
 
-fulladdress="$protocol$hostname$path$data/$dataset/$distribution/$version/"
-echo $fulladdress
 
 #wget  -np -nH --cut-dirs 1 $fulladdress
-wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress
+#wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress_file
+
+
+#check if it worked. If not try downloading folder
+if [ $dataset == "geneproductsplants" ] || [ $dataset == "geneproducts" ]; then 
+    wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress_folder
+   else
+    wget -q $fulladdress_file
+fi
+
