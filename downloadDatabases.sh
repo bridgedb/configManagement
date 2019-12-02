@@ -32,8 +32,7 @@ fulladdress_file="$protocol$hostname$path$data/$dataset/$distribution/$version"
 #wget  -np -nH --cut-dirs 1 $fulladdress
 #wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress_file
 
-
-#check if it worked. If not try downloading folder
+#check which type of databaset and download file or folder accordingly. Consider alternative approaches to make shit decision
 if [ $dataset == "geneproductsplants" ] || [ $dataset == "geneproducts" ]; then 
     wget -r -np -nH --cut-dirs=5 -R "index.*, robots.txt, robots.txt.tmp" $fulladdress_folder
    else
