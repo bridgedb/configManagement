@@ -1,5 +1,7 @@
 # BridgeDb Config management
 
+This repository is no longer recommended. Please [use the JSON files instead](https://chem-bla-ics.blogspot.com/2021/02/downloading-all-currently-released.html).
+
 ## How to use
 
 ### Download scripts and set permissions
